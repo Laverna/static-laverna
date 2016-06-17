@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Time: Wed Jun 15 2016 20:31:21 GMT+0600 (+06)
+# Time: Thu Jun 16 2016 17:59:32 GMT+0600 (+06)
 
 CACHE:
 404.html
@@ -11,11 +11,11 @@ manifest.webapp
 migrate.html
 robots.txt
 docs/howto.md
+scripts/main.js
+scripts/migrate.js
 locales/locales.json
 styles/core.css
 styles/theme-default.css
-scripts/main.js
-scripts/migrate.js
 images/icon/favicon.ico
 images/icon/icon-120x120.png
 images/icon/icon-128x128.png
@@ -33,18 +33,16 @@ images/icon/icon-72x72.png
 images/icon/icon-76x76.png
 images/icon/icon-96x96.png
 images/icon/icon.png
-bower_components/backbone/backbone.js
-bower_components/dropbox/dropbox.js
-bower_components/modernizr/modernizr.js
-bower_components/prism/bundle.js
-bower_components/q/q.js
-bower_components/requirejs/require.js
-bower_components/sjcl/sjcl.js
-bower_components/tv4/tv4.js
-bower_components/underscore/underscore.js
+scripts/helpers/db.js
+scripts/helpers/migrate.js
+scripts/modules/modules.json
+scripts/workers/localForage.js
+scripts/workers/sjcl.js
 locales/ar/translation.json
 locales/bs_ba/translation.json
 locales/da/translation.json
+scripts/classes/sjcl.js
+scripts/classes/sjcl.worker.js
 locales/de/translation.json
 locales/de_ch/translation.json
 locales/el/translation.json
@@ -55,49 +53,41 @@ locales/fr/translation.json
 locales/hi_in/translation.json
 locales/it/translation.json
 locales/lv/translation.json
-locales/nb/translation.json
 locales/mr_in/translation.json
-locales/nn/translation.json
+locales/nb/translation.json
 locales/nl/translation.json
+locales/nn/translation.json
 locales/pt_br/translation.json
 locales/ru/translation.json
 locales/se/translation.json
 locales/sq/translation.json
 locales/tr/translation.json
 locales/zh_cn/translation.json
-scripts/classes/sjcl.js
-scripts/classes/sjcl.worker.js
-scripts/helpers/db.js
-scripts/helpers/migrate.js
-scripts/modules/modules.json
-scripts/workers/localForage.js
-scripts/workers/sjcl.js
-bower_components/backbone.radio/build/backbone.radio.min.js
-bower_components/jquery/dist/jquery.js
-bower_components/localforage/dist/localforage.js
-bower_components/markdown-it/dist/markdown-it.min.js
-bower_components/markdown-it-hashtag/dist/markdown-it-hashtag.min.js
-bower_components/markdown-it-math/dist/markdown-it-math.min.js
-bower_components/markdown-it-sanitizer/dist/markdown-it-sanitizer.min.js
-bower_components/markdown-it-simplemath/dist/markdown-it-simplemath.min.js
-bower_components/prism/themes/prism.css
+bower_components/backbone/backbone.js
+bower_components/dropbox/dropbox.js
+bower_components/modernizr/modernizr.js
+bower_components/prism/bundle.js
+bower_components/q/q.js
+bower_components/requirejs/require.js
+bower_components/sjcl/sjcl.js
+bower_components/tv4/tv4.js
+bower_components/underscore/underscore.js
 scripts/modules/electronSearch/controller.js
 scripts/modules/electronSearch/module.js
 scripts/modules/electronSearch/template.html
 scripts/modules/electronSearch/view.js
-scripts/modules/fs/module.js
 scripts/modules/fuzzySearch/module.js
 scripts/modules/mathjax/module.js
-bower_components/bluebird/js/browser/bluebird.min.js
-bower_components/remotestorage.js/release/stable/remotestorage.js
-styles/core/fontello/font/fontello.eot
-styles/core/fontello/font/fontello.svg
-styles/core/fontello/font/fontello.ttf
-styles/core/fontello/font/fontello.woff
-scripts/modules/fs/classes/adapter.js
-scripts/modules/fs/classes/sync.js
-scripts/modules/fs/templates/settings.html
-scripts/modules/fs/views/settings.js
+scripts/modules/fs/module.js
+bower_components/jquery/dist/jquery.js
+bower_components/localforage/dist/localforage.js
+bower_components/markdown-it/dist/markdown-it.min.js
+bower_components/markdown-it-math/dist/markdown-it-math.min.js
+bower_components/markdown-it-hashtag/dist/markdown-it-hashtag.min.js
+bower_components/markdown-it-sanitizer/dist/markdown-it-sanitizer.min.js
+bower_components/markdown-it-simplemath/dist/markdown-it-simplemath.min.js
+bower_components/prism/themes/prism.css
+bower_components/backbone.radio/build/backbone.radio.min.js
 scripts/modules/fuzzySearch/controllers/main.js
 scripts/modules/fuzzySearch/regions/sidebar.js
 scripts/modules/fuzzySearch/templates/composite.html
@@ -110,6 +100,16 @@ scripts/modules/markdown/libs/markdown-it.js
 scripts/modules/markdown/libs/markdown.js
 scripts/modules/markdown/workers/markdown.js
 scripts/modules/mathjax/libs/mathjax.js
+scripts/modules/fs/classes/adapter.js
+scripts/modules/fs/classes/sync.js
+scripts/modules/fs/templates/settings.html
+scripts/modules/fs/views/settings.js
+bower_components/bluebird/js/browser/bluebird.min.js
+bower_components/remotestorage.js/release/stable/remotestorage.js
+styles/core/fontello/font/fontello.eot
+styles/core/fontello/font/fontello.svg
+styles/core/fontello/font/fontello.ttf
+styles/core/fontello/font/fontello.woff
 
 NETWORK:
 *
@@ -120,4 +120,4 @@ FALLBACK:
 SETTINGS:
 prefer-online
 
-# hash: 8f3417419c192056ecdd8183543971492a4d7a16a1707a59a72bb6c76495a10f
+# hash: 6c00d0c07ab9cebe8e945e9a49dbee3ca522e248f509777b1a0619b97e080e5b
